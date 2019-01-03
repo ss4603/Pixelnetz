@@ -1,0 +1,10 @@
+/**/node_modules
+/dist_frontend
+/dist_master
+/**/yarn.lock
+/**/package-lock.json
+/**/dist
+/server/src/sequences/db/*.json
+.DS_Store
+/**/*.pem
+/**/*.key

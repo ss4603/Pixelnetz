@@ -1,0 +1,27 @@
+\:root
+  --template-cols: repeat(4, 1fr)
+  --card-margin: 2rem
+
+@media (max-width: 1700px)
+  \:root
+    --template-cols: repeat(3, 1fr)
+
+@media (max-width: 1200px)
+  \:root
+    --template-cols: repeat(2, 1fr)
+
+@media (max-width: 720px)
+  \:root
+    --template-cols: 1fr
+    --card-margin: 1.2rem
+
+@media (max-width: 480px)
+  \:root
+    --card-margin: 0.7rem
+
+.CardGrid
+  display: grid
+  grid-column-gap: var(--card-margin)
+  grid-row-gap: var(--card-margin)
+  margin: var(--card-margin)
+  grid-template-columns: var(--template-cols)

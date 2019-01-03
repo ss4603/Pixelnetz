@@ -1,0 +1,15 @@
+@import '../../../styles/vars'
+
+.Input
+  box-sizing: border-box
+  border: $border-width solid $light-text-color
+  border-radius: 2px
+  padding: calc(0.6rem - #{$border-width}) 0.7rem
+  margin: 0.2rem
+  color: $text-color
+
+  &:focus
+    border: $border-width solid $blue
+
+  &:placeholder
+    color: $light-text-color

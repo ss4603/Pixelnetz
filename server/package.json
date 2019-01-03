@@ -1,0 +1,47 @@
+{
+  "name": "pixelserver",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "serve": "cross-env NODE_ENV=production node dist/index.js",
+    "start:prod": "yarn build && cross-env NODE_ENV=production node dist/index.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/index.js",
+    "start:dev:static": "yarn build && cross-env NODE_ENV=development node dist/index.js",
+    "test": "mocha --reporter spec testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "mocha --reporter spec testSetup.js \"src/**/*.test.js\" --watch"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "chroma-js": "^1.4.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.3",
+    "express-fileupload": "^1.0.0",
+    "get-pixels": "^3.3.2",
+    "gif-frames": "^1.0.1",
+    "helmet": "^3.15.0",
+    "jsonwebtoken": "^8.3.0",
+    "my-local-ip": "^1.0.0",
+    "sharp": "^0.21.0",
+    "ws": "^6.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.8.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.5",
+    "sinon": "^7.1.1",
+    "sinon-chai": "^3.2.0",
+    "sinon-express-mock": "^2.1.0"
+  }
+}
